@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3979609096900615169}
   - component: {fileID: 3979609096900615230}
   - component: {fileID: 3979609096900615231}
+  - component: {fileID: 8785395908635209765}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -257,6 +258,19 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -72.56259
     m_UpperAngle: 68.2425
+--- !u!114 &8785395908635209765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609096900615222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redirectTo: {fileID: 3979609097413849194}
 --- !u!1 &3979609097413849194
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +281,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3979609097413849197}
   - component: {fileID: 3979609097413849196}
+  - component: {fileID: 1678769342185309236}
+  - component: {fileID: 668208394}
   m_Layer: 0
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -310,6 +326,30 @@ MonoBehaviour:
   headForcePoint: {fileID: 3979609098700205146}
   torsoForce: 300
   headForce: 2500
+--- !u!114 &1678769342185309236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609097413849194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73430eea56c54f14e9db7031ee3f62b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &668208394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609097413849194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f79e79e14f0134b916916b6d5b612d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3979609098080176815
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +362,7 @@ GameObject:
   - component: {fileID: 3979609098080176816}
   - component: {fileID: 3979609098080176817}
   - component: {fileID: 3979609098080176819}
-  - component: {fileID: 3979609098080176818}
+  - component: {fileID: 628077841014108162}
   m_Layer: 0
   m_Name: LeftArm
   m_TagString: Untagged
@@ -442,7 +482,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3979609098080176818
+--- !u!114 &628077841014108162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,10 +491,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3979609098080176815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae015e26ed772f4a88d18ebf9cbbaa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redirectTo: {fileID: 3979609096900615222}
+  redirectTo: {fileID: 3979609097413849194}
 --- !u!1 &3979609098139817793
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +507,7 @@ GameObject:
   - component: {fileID: 3979609098139817794}
   - component: {fileID: 3979609098139817795}
   - component: {fileID: 3979609098139817797}
-  - component: {fileID: 3979609098139817796}
+  - component: {fileID: 3630994535905911782}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: Untagged
@@ -587,7 +627,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3979609098139817796
+--- !u!114 &3630994535905911782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,10 +636,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3979609098139817793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae015e26ed772f4a88d18ebf9cbbaa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redirectTo: {fileID: 3979609096900615222}
+  redirectTo: {fileID: 3979609097413849194}
 --- !u!1 &3979609098233322547
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +682,7 @@ GameObject:
   - component: {fileID: 3979609098383941177}
   - component: {fileID: 3979609098383941174}
   - component: {fileID: 3979609098383941179}
-  - component: {fileID: 3979609098383941178}
+  - component: {fileID: 3504430960016847760}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -763,7 +803,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3979609098383941178
+--- !u!114 &3504430960016847760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -772,10 +812,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3979609098383941175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae015e26ed772f4a88d18ebf9cbbaa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redirectTo: {fileID: 3979609096900615222}
+  redirectTo: {fileID: 3979609097413849194}
 --- !u!1 &3979609098446548913
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +828,7 @@ GameObject:
   - component: {fileID: 3979609098446548914}
   - component: {fileID: 3979609098446548915}
   - component: {fileID: 3979609098446548917}
-  - component: {fileID: 3979609098446548916}
+  - component: {fileID: 6540637517225123406}
   m_Layer: 0
   m_Name: RightArm
   m_TagString: Untagged
@@ -908,7 +948,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3979609098446548916
+--- !u!114 &6540637517225123406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -917,10 +957,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3979609098446548913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae015e26ed772f4a88d18ebf9cbbaa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redirectTo: {fileID: 3979609096900615222}
+  redirectTo: {fileID: 3979609097413849194}
 --- !u!1 &3979609098700205146
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +1003,7 @@ GameObject:
   - component: {fileID: 3979609098916432149}
   - component: {fileID: 3979609098916432146}
   - component: {fileID: 3979609098916432148}
-  - component: {fileID: 3979609098916432151}
+  - component: {fileID: 4126628463388749107}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -1083,7 +1123,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3979609098916432151
+--- !u!114 &4126628463388749107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1092,7 +1132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3979609098916432144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae015e26ed772f4a88d18ebf9cbbaa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5290836741f207b47a79ec3944ac8773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redirectTo: {fileID: 3979609096900615222}
+  redirectTo: {fileID: 3979609097413849194}
