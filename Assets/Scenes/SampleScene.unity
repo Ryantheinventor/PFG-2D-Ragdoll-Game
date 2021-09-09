@@ -518,7 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickingLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 51
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0

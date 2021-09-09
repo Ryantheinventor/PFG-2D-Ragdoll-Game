@@ -100,6 +100,11 @@ public class SelectMenu : MonoBehaviour
                 if(c.attachedRigidbody)
                     c.attachedRigidbody.AddForce((c.attachedRigidbody.position - (Vector2)curSelected.transform.position).normalized * 10, ForceMode2D.Impulse);
             }
+            GameObject explosionFab = Resources.Load<GameObject>("Effects/Explosion");
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(explosionFab).transform.position = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0).normalized * Random.Range(0f, 1f) + curSelected.transform.position;
+            }
         }
         OnDeleteSelected();
     }
