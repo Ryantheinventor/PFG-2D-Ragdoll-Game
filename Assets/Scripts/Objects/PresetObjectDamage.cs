@@ -15,7 +15,11 @@ public class PresetObjectDamage : ObjectDamage
     private void OnCollisionEnter2D(Collision2D collision)
     {
         curState = 0;
-        float rV = totalV += collision.relativeVelocity.magnitude;
+        float rV = totalV;
+        if (collision.relativeVelocity.magnitude > 10)
+        {
+            rV = totalV += collision.relativeVelocity.magnitude;
+        }
         while (rV > speedForDamage)
         {
             curState++;
@@ -29,6 +33,7 @@ public class PresetObjectDamage : ObjectDamage
         {
             if (curState > damageStates.Length - 1)
             {
+                maxDamage = true;
                 curState = damageStates.Length - 1;
             }
             sRenderer.sprite = damageStates[curState];

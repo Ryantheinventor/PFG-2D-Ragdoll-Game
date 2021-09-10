@@ -11,6 +11,7 @@ public class ObjectDamage : MonoBehaviour
     protected int curState = 0;
     public float totalV = 0;
     public bool destroyAtMaxDamage = true;
+    public bool maxDamage = false;
     private void Start()
     {
         damageStates = Resources.LoadAll<Sprite>("objects/" + damageStatesFileName);
@@ -20,7 +21,11 @@ public class ObjectDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         curState = 0;
-        float rV = totalV += collision.relativeVelocity.magnitude;
+        float rV = totalV;
+        if (collision.relativeVelocity.magnitude > 10) 
+        {
+            rV = totalV += collision.relativeVelocity.magnitude;
+        }
         while (rV > speedForDamage) 
         {
             curState++;
@@ -34,6 +39,7 @@ public class ObjectDamage : MonoBehaviour
         {
             if (curState > damageStates.Length - 1)
             {
+                maxDamage = true;
                 curState = damageStates.Length - 1;
             }
             sRenderer.sprite = damageStates[curState];
