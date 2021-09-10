@@ -7,7 +7,6 @@ public class ExplosiveBarrel : MonoBehaviour
     public float thresholdVelocity = 10f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude > thresholdVelocity)
         {
             foreach (Collider2D c in Physics2D.OverlapCircleAll(transform.position, 2))
