@@ -56,17 +56,10 @@ public class SelectMenu : MonoBehaviour
         if (resetTarget.GetComponent<ResetRedirect>())
         {
             resetTarget.GetComponent<ResetRedirect>().OnReset();
+            return;
         }
-        Rigidbody2D selectedRB = resetTarget.GetComponent<Rigidbody2D>();
-        if (selectedRB)
-        {
-            selectedRB.position = new Vector3(0, 0, 0);
-        }
-        else
-        {
-            resetTarget.transform.position = new Vector3(0, 0, 0);
-        }
-
+        curSelected = Instantiate(curSelected.GetComponent<PrefabLoader>().Prefab);
+        Destroy(resetTarget);
     }
 
     public static void OnDeleteSelected() 

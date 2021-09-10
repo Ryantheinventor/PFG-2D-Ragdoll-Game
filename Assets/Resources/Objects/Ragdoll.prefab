@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 3979609096900615230}
   - component: {fileID: 3979609096900615231}
   - component: {fileID: 8785395908635209765}
+  - component: {fileID: 5124419762308463838}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -744,6 +745,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &5124419762308463838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609096900615222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 5472196717555794501}
+  damageStates:
+  - {fileID: 8314618929051121211, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -8936369286801908313, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: 644206326527196410, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &3979609097413849194
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +882,7 @@ GameObject:
   - component: {fileID: 3979609098080176817}
   - component: {fileID: 3979609098080176819}
   - component: {fileID: 628077841014108162}
+  - component: {fileID: 874763785450460976}
   m_Layer: 0
   m_Name: LeftArm
   m_TagString: Untagged
@@ -994,6 +1017,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &874763785450460976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609098080176815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 78799211872283733}
+  damageStates:
+  - {fileID: -5307835717121900515, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: 5275857388218600217, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -410970967390598805, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &3979609098139817793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1051,7 @@ GameObject:
   - component: {fileID: 3979609098139817795}
   - component: {fileID: 3979609098139817797}
   - component: {fileID: 3630994535905911782}
+  - component: {fileID: 6064196785501485255}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: Untagged
@@ -1140,6 +1185,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &6064196785501485255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609098139817793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 9081367132143968533}
+  damageStates:
+  - {fileID: -6155720135567401135, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -2693884790457188459, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -9039259074990109702, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &3979609098233322547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1249,7 @@ GameObject:
   - component: {fileID: 3979609098383941174}
   - component: {fileID: 3979609098383941179}
   - component: {fileID: 3504430960016847760}
+  - component: {fileID: 6588262934033823427}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1317,6 +1384,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &6588262934033823427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609098383941175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 3904466458317296508}
+  damageStates:
+  - {fileID: -164558153047940404, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -7251409571774201095, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: 7833137456056237668, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &3979609098446548913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1418,7 @@ GameObject:
   - component: {fileID: 3979609098446548915}
   - component: {fileID: 3979609098446548917}
   - component: {fileID: 6540637517225123406}
+  - component: {fileID: 5510416942953611074}
   m_Layer: 0
   m_Name: RightArm
   m_TagString: Untagged
@@ -1464,6 +1553,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &5510416942953611074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609098446548913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 8562656341095944490}
+  damageStates:
+  - {fileID: -5307835717121900515, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: 5275857388218600217, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -410970967390598805, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &3979609098700205146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1617,7 @@ GameObject:
   - component: {fileID: 3979609098916432146}
   - component: {fileID: 3979609098916432148}
   - component: {fileID: 4126628463388749107}
+  - component: {fileID: 3483800650804886812}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -1640,6 +1751,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redirectTo: {fileID: 3979609097413849194}
+--- !u!114 &3483800650804886812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979609098916432144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedForDamage: 200
+  damageStatesFileName: 
+  totalV: 0
+  destroyAtMaxDamage: 0
+  sRenderer: {fileID: 577715278087022961}
+  damageStates:
+  - {fileID: -6155720135567401135, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -2693884790457188459, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  - {fileID: -9039259074990109702, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
 --- !u!1 &5094433548045841164
 GameObject:
   m_ObjectHideFlags: 0
