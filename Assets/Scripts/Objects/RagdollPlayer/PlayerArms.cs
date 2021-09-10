@@ -31,16 +31,22 @@ public class PlayerArms : MonoBehaviour
 
     public static void ActivatePlayerArms()
     {
-        armsActive = true;
-        StaticPlayerInput.PInput.currentActionMap["Click"].started += OnFire;
+        if (!armsActive) 
+        {
+            armsActive = true;
+            StaticPlayerInput.PInput.currentActionMap["Click"].started += OnFire;
+        }
     }
 
     
 
     public static void DisablePlayerArms()
     {
-        armsActive = false;
-        StaticPlayerInput.PInput.currentActionMap["Click"].started -= OnFire;
+        if (armsActive) 
+        {
+            armsActive = false;
+            StaticPlayerInput.PInput.currentActionMap["Click"].started -= OnFire;
+        }
     }
 
     //fire weapon

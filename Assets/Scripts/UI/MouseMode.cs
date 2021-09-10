@@ -77,41 +77,27 @@ public class MouseMode : MonoBehaviour
                 StaticPlayerInput.PInput.currentActionMap["Click"].started += SelectClick;
                 PlayerArms.DisablePlayerArms();
                 break;
-
             case PointerMode.Move:
                 PlaceMenu.CloseCurMenu();
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = true;
                 PlayerArms.DisablePlayerArms();
-                try
-                {
-                    StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
-                }
-                catch { }
+                StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
                 break;
-
             case PointerMode.Place:
                 PlaceMenu.CloseCurMenu();
                 Instantiate(Resources.Load<GameObject>("UI/PlaceMenu"), myCanvas.transform);
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = false;
                 PlayerArms.DisablePlayerArms();
-                try
-                {
-                    StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
-                }
-                catch { }
+                StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
                 break;
             case PointerMode.PlayerDoll:
                 PlaceMenu.CloseCurMenu();
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = false;
                 PlayerArms.ActivatePlayerArms();
-                try
-                {
-                    StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
-                }
-                catch { }
+                StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
                 break;
         }
         modeIconImage.sprite = modeIcons[(int)curMode];
