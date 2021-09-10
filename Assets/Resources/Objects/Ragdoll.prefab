@@ -800,7 +800,7 @@ MonoBehaviour:
   torsoForcePoint: {fileID: 3979609098233322547}
   headForcePoint: {fileID: 3979609098700205146}
   torsoForce: 300
-  headForce: 2700
+  headForce: 2600
 --- !u!114 &1678769342185309236
 MonoBehaviour:
   m_ObjectHideFlags: 0

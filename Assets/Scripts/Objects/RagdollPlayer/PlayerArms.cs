@@ -72,7 +72,6 @@ public class PlayerArms : MonoBehaviour
     //aiming
     private void FixedUpdate()
     {
-        Debug.Log(Mouse.current.position.ReadValue());
         if (armsActive)
         {
             Vector2 mouseWorldPos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -83,7 +82,6 @@ public class PlayerArms : MonoBehaviour
                 leftArm.gravityScale = 1;
                 leftWeapon.enabled = false;
                 rightWeapon.enabled = true;
-                Debug.Log("Right Arm");
                 //use right arm
                 useRightArm = true;
                 Vector2 rrPoint = (Vector2)(-rightArm.transform.up + rightArm.transform.right) * 0.2f + rightArm.position;//cw rotation needed
