@@ -13,6 +13,7 @@ public class MouseMode : MonoBehaviour
     public Image modeIconImage;
     private Sprite[] modeIcons;
     public static MouseMode instance = null;
+    private bool selectEnabled = false;
     public enum PointerMode 
     {
         Select,
@@ -73,12 +74,17 @@ public class MouseMode : MonoBehaviour
         {
             //TODO show mode on button
             case PointerMode.Select:
+                if (!selectEnabled) 
+                {
+                    StaticPlayerInput.PInput.currentActionMap["Click"].started += SelectClick;
+                    selectEnabled = true;
+                }
                 PlaceMenu.OpenMenu();
                 ObjectPickup.pickupEnabled = false;
-                StaticPlayerInput.PInput.currentActionMap["Click"].started += SelectClick;
                 PlayerArms.DisablePlayerArms();
                 break;
             case PointerMode.Move:
+                selectEnabled = false;
                 PlaceMenu.OpenMenu();
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = true;
@@ -93,6 +99,7 @@ public class MouseMode : MonoBehaviour
             //    StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
             //    break;
             case PointerMode.PlayerDoll:
+                selectEnabled = false;
                 PlaceMenu.CloseCurMenu();
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = false;
