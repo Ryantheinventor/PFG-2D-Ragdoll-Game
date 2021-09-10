@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlaceMenu : MonoBehaviour
 {
     public bool menuClosed = false;
-    private static PlaceMenu instance = null;
+    public static PlaceMenu instance = null;
+    private static Transform canvas;
+    private static GameObject myPrefab;
 
     private void Start()
     {
@@ -34,4 +36,23 @@ public class PlaceMenu : MonoBehaviour
         if (instance)
             instance.CloseMenu();
     }
+
+    public static void OpenMenu() 
+    {
+        if (!canvas) 
+        {
+            canvas = FindObjectOfType<Canvas>().transform;
+        }
+        if (!instance) 
+        {
+            if (!myPrefab) 
+            {
+                myPrefab = Resources.Load<GameObject>("UI/PlaceMenu");
+            }
+            (Instantiate(myPrefab, myPrefab.transform.position, myPrefab.transform.rotation) as GameObject).transform.SetParent(canvas, false);
+        }
+            
+    }
+
+
 }

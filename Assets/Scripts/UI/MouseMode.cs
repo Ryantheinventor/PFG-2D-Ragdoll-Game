@@ -17,7 +17,7 @@ public class MouseMode : MonoBehaviour
     {
         Select,
         Move,
-        Place,
+        //Place,
         PlayerDoll
     }
 
@@ -30,8 +30,9 @@ public class MouseMode : MonoBehaviour
         selectMenuFab = Resources.Load<GameObject>("UI/SelectMenu");
         StaticPlayerInput.PInput.currentActionMap["Key1"].started += SwitchToSelect;
         StaticPlayerInput.PInput.currentActionMap["Key2"].started += SwitchToMove;
-        StaticPlayerInput.PInput.currentActionMap["Key3"].started += SwitchToPlace;
-        StaticPlayerInput.PInput.currentActionMap["Key4"].started += SwitchToDoll;
+        StaticPlayerInput.PInput.currentActionMap["Key3"].started += SwitchToDoll;
+        //StaticPlayerInput.PInput.currentActionMap["Key3"].started += SwitchToPlace;
+        //StaticPlayerInput.PInput.currentActionMap["Key4"].started += SwitchToDoll;
         UpdateMode();
     }
 
@@ -45,11 +46,11 @@ public class MouseMode : MonoBehaviour
         curMode = PointerMode.Move;
         UpdateMode();
     }
-    private void SwitchToPlace(UnityEngine.InputSystem.InputAction.CallbackContext obj)
-    {
-        curMode = PointerMode.Place;
-        UpdateMode();
-    }
+    //private void SwitchToPlace(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    //{
+    //    curMode = PointerMode.Place;
+    //    UpdateMode();
+    //}
     private void SwitchToDoll(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         curMode = PointerMode.PlayerDoll;
@@ -72,26 +73,25 @@ public class MouseMode : MonoBehaviour
         {
             //TODO show mode on button
             case PointerMode.Select:
-                PlaceMenu.CloseCurMenu();
+                PlaceMenu.OpenMenu();
                 ObjectPickup.pickupEnabled = false;
                 StaticPlayerInput.PInput.currentActionMap["Click"].started += SelectClick;
                 PlayerArms.DisablePlayerArms();
                 break;
             case PointerMode.Move:
-                PlaceMenu.CloseCurMenu();
+                PlaceMenu.OpenMenu();
                 SelectMenu.curSelected = null;
                 ObjectPickup.pickupEnabled = true;
                 PlayerArms.DisablePlayerArms();
                 StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
                 break;
-            case PointerMode.Place:
-                PlaceMenu.CloseCurMenu();
-                Instantiate(Resources.Load<GameObject>("UI/PlaceMenu"), myCanvas.transform);
-                SelectMenu.curSelected = null;
-                ObjectPickup.pickupEnabled = false;
-                PlayerArms.DisablePlayerArms();
-                StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
-                break;
+            //case PointerMode.Place:
+            //    PlaceMenu.OpenMenu();
+            //    SelectMenu.curSelected = null;
+            //    ObjectPickup.pickupEnabled = false;
+            //    PlayerArms.DisablePlayerArms();
+            //    StaticPlayerInput.PInput.currentActionMap["Click"].started -= SelectClick;
+            //    break;
             case PointerMode.PlayerDoll:
                 PlaceMenu.CloseCurMenu();
                 SelectMenu.curSelected = null;
@@ -110,7 +110,7 @@ public class MouseMode : MonoBehaviour
             SelectMenu.CloseCurMenu();
             if (PickingRaycast.TargetedObject)
             {
-                Instantiate(selectMenuFab, myCanvas.transform);
+                (Instantiate(selectMenuFab, selectMenuFab.transform.position, selectMenuFab.transform.rotation) as GameObject).transform.SetParent(myCanvas.transform, false);
                 //need to add selection redirecting
                 SelectMenu.curSelected = PickingRaycast.TargetedObject;
             }
