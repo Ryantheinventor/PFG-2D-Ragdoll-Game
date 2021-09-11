@@ -759,14 +759,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 200
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 5472196717555794501}
   damageStates:
   - {fileID: 8314618929051121211, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -8936369286801908313, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: 644206326527196410, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 5472196717555794501}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!1 &3979609097413849194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,14 +1032,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 200
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 78799211872283733}
   damageStates:
   - {fileID: -5307835717121900515, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: 5275857388218600217, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -410970967390598805, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 78799211872283733}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!1 &3979609098139817793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,14 +1202,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 200
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 9081367132143968533}
   damageStates:
   - {fileID: -6155720135567401135, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -2693884790457188459, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -9039259074990109702, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 9081367132143968533}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!114 &302270545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,6 +1224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointToBreak: {fileID: 3979609096900615231}
   objectDamage: {fileID: 6064196785501485255}
+  killsPlayer: 0
 --- !u!1 &3979609098233322547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,16 +1416,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add5c4ef29f426b4aa6d013a9c183de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedForDamage: 200
+  speedForDamage: 400
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 3904466458317296508}
   damageStates:
   - {fileID: -164558153047940404, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -7251409571774201095, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: 7833137456056237668, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 3904466458317296508}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!114 &749282501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,6 +1440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointToBreak: {fileID: 3979609096900615225}
   objectDamage: {fileID: 6588262934033823427}
+  killsPlayer: 1
 --- !u!1 &3979609098446548913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,14 +1603,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 200
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 8562656341095944490}
   damageStates:
   - {fileID: -5307835717121900515, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: 5275857388218600217, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -410970967390598805, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 8562656341095944490}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!1 &3979609098700205146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,14 +1803,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 200
   damageStatesFileName: 
-  totalV: 0
-  destroyAtMaxDamage: 0
-  maxDamage: 0
-  sRenderer: {fileID: 577715278087022961}
   damageStates:
   - {fileID: -6155720135567401135, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -2693884790457188459, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
   - {fileID: -9039259074990109702, guid: f50a4ba859b2a404bbf60b8a3d9e910a, type: 3}
+  sRenderer: {fileID: 577715278087022961}
+  totalV: 0
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!114 &1329842639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,6 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointToBreak: {fileID: 3979609096900615230}
   objectDamage: {fileID: 3483800650804886812}
+  killsPlayer: 0
 --- !u!1 &5094433548045841164
 GameObject:
   m_ObjectHideFlags: 0

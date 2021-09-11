@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1788005739102449969}
   - component: {fileID: 1036071903010771976}
   - component: {fileID: -1542122405347690173}
+  - component: {fileID: 6570201492797259875}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -147,8 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedForDamage: 100
   damageStatesFileName: Crate_Damage_States
+  damageStates: []
+  sRenderer: {fileID: 0}
   totalV: 0
-  destroyAtMaxDamage: 1
+  destroyAtMaxDamage: 0
+  maxDamage: 0
 --- !u!114 &-1542122405347690173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +166,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPath: Objects/Box
+--- !u!114 &6570201492797259875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788005739102449982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eeead18d820e9248b613352e3ffd8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RagdollUpright : MonoBehaviour
 {
+    public static bool isDead = false;
     public float maxSpeed = 1;
     public GameObject torsoForcePoint;
     public GameObject headForcePoint;
@@ -13,6 +14,7 @@ public class RagdollUpright : MonoBehaviour
     private Rigidbody2D head;
     private void Start()
     {
+        isDead = false;
         torso = torsoForcePoint.transform.parent.GetComponent<Rigidbody2D>();
         head = headForcePoint.transform.parent.GetComponent<Rigidbody2D>();
     }
@@ -22,7 +24,7 @@ public class RagdollUpright : MonoBehaviour
     {
         foreach (Collider2D c in Physics2D.OverlapCircleAll(torsoForcePoint.transform.position, 1))
         {
-            if (!c.transform.IsChildOf(transform) && torso.velocity.magnitude < maxSpeed)
+            if (!c.transform.IsChildOf(transform) && torso.velocity.magnitude < maxSpeed && !isDead)
             {
                 torso.AddForceAtPosition(Vector2.down * torsoForce * Time.deltaTime, torsoForcePoint.transform.position);
                 head.AddForceAtPosition(Vector2.up * headForce * Time.deltaTime, headForcePoint.transform.position);

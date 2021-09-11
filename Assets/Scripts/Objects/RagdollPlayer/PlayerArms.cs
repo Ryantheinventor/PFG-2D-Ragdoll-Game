@@ -54,6 +54,7 @@ public class PlayerArms : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
+            Achievements.NewAchievement("I did WHAT?", "Well if you paid any attention you would know...");
             if (instance.useRightArm)
             {
                 GameObject newProjectile = Instantiate(instance.projectile);

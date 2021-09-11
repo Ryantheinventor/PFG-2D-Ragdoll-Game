@@ -39,27 +39,32 @@ public class MouseMode : MonoBehaviour
 
     private void SwitchToSelect(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        Achievements.NewAchievement("I did a thing", "Swaping cursor modes is what you did.");
         curMode = PointerMode.Select;
         UpdateMode();
     }
     private void SwitchToMove(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        Achievements.NewAchievement("I did a thing", "Swaping cursor modes is what you did.");
         curMode = PointerMode.Move;
         UpdateMode();
     }
     //private void SwitchToPlace(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     //{
+    //    Achievements.NewAchievement("I did a thing", "Swaping cursor modes is what you did.");
     //    curMode = PointerMode.Place;
     //    UpdateMode();
     //}
     private void SwitchToDoll(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        Achievements.NewAchievement("I did a thing", "Swaping cursor modes is what you did.");
         curMode = PointerMode.PlayerDoll;
         UpdateMode();
     }
 
     public void OnClick()
     {
+        Achievements.NewAchievement("I did a thing", "Swaping cursor modes is what you did.");
         curMode++;
         if (!Enum.IsDefined(typeof(PointerMode), curMode))
         {

@@ -9,6 +9,7 @@ public class ExplosiveBarrel : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > thresholdVelocity)
         {
+            Achievements.NewAchievement("BOOM!", "Be a bit more carefull next time maybe?");
             foreach (Collider2D c in Physics2D.OverlapCircleAll(transform.position, 2))
             {
                 if (c.attachedRigidbody)

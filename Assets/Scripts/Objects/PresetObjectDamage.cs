@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PresetObjectDamage : ObjectDamage
 {
-    public new SpriteRenderer sRenderer;
-    public new Sprite[] damageStates;
-    private new string damageStatesFileName;
     private void Start()
     {
         

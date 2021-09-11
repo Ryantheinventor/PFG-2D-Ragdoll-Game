@@ -74,12 +74,14 @@ public class SelectMenu : MonoBehaviour
             else 
             {
                 Destroy(deleteTarget);
+                Achievements.NewAchievement("POOF", "Where did you put it!?");
             }
         }
     }
 
     public static void OnExplodeSelected() 
     {
+        Achievements.NewAchievement("Witchcraft", "You didn't even touch it...");
         GameObject explodeTarget = GetSelected();
         if (explodeTarget.GetComponent<ExplodeRedirect>())
         {
