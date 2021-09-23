@@ -13,6 +13,7 @@ public class ObjectButton : MonoBehaviour
 
     public void OnClick() 
     {
+        PlaceMenu.spawnedObjects++;
         Instantiate(myObject.prefab);
     }
 

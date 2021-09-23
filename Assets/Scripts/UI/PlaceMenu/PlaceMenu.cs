@@ -8,6 +8,7 @@ public class PlaceMenu : MonoBehaviour
     public static PlaceMenu instance = null;
     private static Transform canvas;
     private static GameObject myPrefab;
+    public static int spawnedObjects = 0;
 
     private void Start()
     {
@@ -19,6 +20,18 @@ public class PlaceMenu : MonoBehaviour
         if (menuClosed)
         {
             Destroy(gameObject);
+        }
+        if (spawnedObjects == 100)
+        {
+            Achievements.NewAchievement("Behold! My stuff:", "Spawned 100 objects.");
+        }
+        if (spawnedObjects == 200)
+        {
+            Achievements.NewAchievement("All The Things", "Spawned 200 objects.");
+        }
+        if (spawnedObjects == 500)
+        {
+            Achievements.NewAchievement("Wormhole?", "NO seriously where is all this stuff coming from.");
         }
     }
 

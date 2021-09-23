@@ -6,9 +6,7 @@ public class ObjectDamage : MonoBehaviour
 {
     public float speedForDamage = 12f;
     public string damageStatesFileName = "";
-    [HideInInspector]
     public Sprite[] damageStates;
-    [HideInInspector]
     public SpriteRenderer sRenderer;
     protected int curState = 0;
     [HideInInspector]
