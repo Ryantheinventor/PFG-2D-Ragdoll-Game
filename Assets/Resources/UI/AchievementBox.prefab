@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text1: {fileID: 6501747041201039917}
   text2: {fileID: 6501747040161666773}
-  totalAchievementCount: 8
+  totalAchievementCount: 11
 --- !u!95 &1864633085
 Animator:
   serializedVersion: 3

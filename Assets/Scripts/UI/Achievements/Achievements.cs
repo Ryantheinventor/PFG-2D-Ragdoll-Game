@@ -21,6 +21,7 @@ public class Achievements : MonoBehaviour
     private static Queue<AchievementData> achievementQueue = new Queue<AchievementData>();
     public static void NewAchievement(string achievementName, string achievementDesc) 
     {
+        
         if (!canvas)
         {
             canvas = FindObjectOfType<Canvas>().transform;
@@ -32,6 +33,7 @@ public class Achievements : MonoBehaviour
 
         if (!achieved.Contains(achievementName)) 
         {
+            Debug.Log(achievementName);
             achieved.Add(achievementName);
             AchievementData newData = new AchievementData() { name = achievementName, desc = achievementDesc };
             if (activeAchievementBox)
